@@ -1,0 +1,13 @@
+# Roblox / Rojo
+*.rbxlx
+*.rbxl
+*.rbxm
+*.rbxmx
+
+# Temporary
+*.tmp
+*.log
+
+# System
+.DS_Store
+Thumbs.db
