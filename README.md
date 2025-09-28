@@ -19,6 +19,10 @@ A Roblox tycoon game framework featuring persistent player data, in-game purchas
   - Unlockable and upgradeable components.
   - Modular component system (`Upgrader`, `Despawn`, `Kill`, etc.).
   - Automatic event subscription via `BindableEvent` topics.
+
+  - **CollectionService Tags**
+  - This project uses Roblox's `CollectionService` to tag objects (e.g., Gamepass buttons, tycoon components).
+  - Tags allow automatic module attachment and event handling for new objects added during runtime.
   
 - **Data Safety**
   - `Reconcile` ensures new fields are safely added to old player data.
@@ -26,14 +30,17 @@ A Roblox tycoon game framework featuring persistent player data, in-game purchas
   - Functions for clearing unlocks or resetting player tycoon data.
 
 ## Folder Structure
-ServerScriptService/
-├─ PlayerManager.lua -- Handles player sessions, data, and gamepasses
-├─ Tycoon/
-│ ├─ Tycoon.lua -- Main Tycoon class
-│ ├─ Components/ -- Component modules (Upgrader, Despawn, Kill, etc.)
-│ └─ PlayerHandler.lua -- Optional player utility module
-├─ ProductHandler.lua -- Handles developer products
-LocalScripts/
-├─ PlayerMonetization.lua -- Handles Gamepass/DevProduct UI prompts
-ModuleScripts/
-├─ Gamepasses.lua -- Gamepass effects mapped by ID
+
+- **ServerScriptService**
+  - `PlayerManager.lua` — Handles player sessions, data, and gamepasses
+  - **Tycoon/**
+    - `Tycoon.lua` — Main Tycoon class
+    - **Components/** — Component modules (Upgrader, Despawn, Kill, etc.)
+    - `PlayerHandler.lua` — Optional player utility module
+  - `ProductHandler.lua` — Handles developer products
+
+- **LocalScripts**
+  - `PlayerMonetization.lua` — Handles Gamepass/DevProduct UI prompts
+
+- **ModuleScripts**
+  - `Gamepasses.lua` — Gamepass effects mapped by ID
